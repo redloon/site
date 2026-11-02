@@ -10,7 +10,7 @@ A few languages that I've stumbled on recently that I find very interesting - th
 
 ## Sieve - server-side mail filtering
 
-A language built for filtering email messages, on either a client or server. I'm sure others use it as well, but Fastmail was what introduced me to [Sieve](http:sieve.info). They've done a bang-up job putting together an interface with a simple user interface for "writing" Sieve rules. They were humble enough to recognize they can't cover everything, though, so they get to join the ranks of software that I respect for adding an escape hatch for advanced use cases.
+A language built for filtering email messages, on either a client or server. I'm sure others use it as well, but Fastmail was what introduced me to [Sieve](https://sieve.info). They've done a bang-up job putting together an interface with a simple user interface for "writing" Sieve rules. They were humble enough to recognize they can't cover everything, though, so they get to join the ranks of software that I respect for adding an escape hatch for advanced use cases.
 
 - [Sieve Tester | Fastmail](https://app.fastmail.com/sievetester/)
 - [Using Sieve in Fastmail](https://www.fastmail.help/hc/en-us/articles/1500000280481-Using-Sieve-scripts-in-Fastmail)

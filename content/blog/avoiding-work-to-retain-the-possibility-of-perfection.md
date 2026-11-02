@@ -35,7 +35,7 @@ If I don't finish the project, it lives in a hypothetical world where it could b
 
 [The Gap](https://www.kristinwitcher.com/blog/the-gap) is the difference between how your taste and expectations of a skill change in comparison to your ability to execute. In the wrong hands, The Gap makes it difficult to take the first step because your creation won't measure up to your standards.
 
-![Diagram of the The Gap by Ira Glass](/uploads/the-gap-ira-glass-diagram.png#center)
+![Diagram showing taste rising ahead of skill over time, leaving a gap between the quality you recognize and the work you can produce.](/uploads/the-gap-ira-glass-diagram.png#center)
 _Expectation: 🥇 Reality: 💩_
 
 As a chronic over-thinker and over-researcher, I was exacerbating this problem. I sift through piles of information and become an armchair expert, increasing my expectations without changing my ability to execute. The Gap gets wider with every turn of the page, but when I finally pick up a brush the theoretical evaporates, and I'm left as a novice. Only taking action can close the distance.

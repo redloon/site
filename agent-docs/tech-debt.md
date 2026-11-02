@@ -6,6 +6,12 @@ Audited: 2026-03-04. Issues found across accessibility, performance, and general
 
 ## Accessibility
 
+### Reading images and navigation (November 2026)
+- [x] Added descriptions to all ten Markdown images with empty alt text; improved three vague descriptions and the homepage portrait alternative.
+- [x] Added visible figure captions to the salary charts, Venmo summary, and serverless fan-out diagram. Keep detailed explanations and pseudocode in surrounding text.
+- [x] Fixed all 65 reported internal-link failures: use Hugo category term permalinks, correct article/static-tool URLs and anchors, and disable nonexistent mockup destinations. `make validate` now passes.
+- [x] Checked generated HTML: all 377 rendered image occurrences have nonempty alternatives. This does not cover images injected later by third-party scripts.
+
 ### Iframes missing `title` attribute
 - [x] [MED] `themes/hugo-goa/layouts/partials/email-form.html:18` — Beehiiv iframe was already commented out; now using Kit.com JS embed (no iframe). Non-issue.
 - [x] [MED] `layouts/shortcodes/giphy.html` — fixed: added `title="Giphy GIF embed"`

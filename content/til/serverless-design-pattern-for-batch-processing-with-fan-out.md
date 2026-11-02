@@ -10,7 +10,7 @@ This is a simple serverless design pattern that has come in handy numerous times
 
 The design pattern only requires a single Lambda, with a conditional variable in the input that chooses how the Lambda will behave. It will either operate as **A)** the fan-out orchestrator, or **B)** process a single item/batch.
 
-![](/uploads/serverless-batch-processing-smaller.jpg)
+{{< figure src="/uploads/serverless-batch-processing-smaller.jpg" alt="An external trigger starts a Lambda orchestrator, which splits data into chunks and invokes parallel workers using the same Lambda function." caption="One Lambda, two roles: start_fanout distributes the chunks; process_chunk handles each batch. The pseudocode follows below." >}}
 
 The pseudocode from the photo is repeated below:
 

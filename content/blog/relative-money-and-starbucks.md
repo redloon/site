@@ -39,11 +39,11 @@ That's less than our threshold of 0.1%! If we follow that same ratio, what would
 
 Now that we see how it works under the hood, this chart maps out a ratio of 0.1% of monthly income vs a yearly salary to understand how it scales up and down. Unfortunately our Super Rich friend doesn't even show up on this chart!
 
-![](/uploads/how-does-trivial-purchase-size-change-with-salary.png)
+{{< figure src="/uploads/how-does-trivial-purchase-size-change-with-salary.png" alt="Chart of yearly salary versus a purchase costing 0.1% of monthly income: $60,000 corresponds to $5 and $600,000 to $50." caption="A trivial purchase here means 0.1% of monthly income: divide annual salary by 12,000 to find the amount." >}}
 
 If we actually want to see them on a chart, we have to scale up by a lot.
 
-![](/uploads/labeled-yearly-vs-trivial.jpg)
+{{< figure src="/uploads/labeled-yearly-vs-trivial.jpg" alt="The same linear relationship extended to $3.3 million per year and $275 per purchase; the earlier $0–$50 chart occupies the lower-left corner." caption="At $3 million a year, a $250 purchase has the same proportional cost as a $5 purchase at $60,000 a year." >}}
 
 ## What to do with this information
 
