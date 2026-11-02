@@ -27,10 +27,10 @@
 
   {{/* Filter buttons */}}
   <div class="btn-group stream-filters" role="group" aria-label="Content filter" style="margin-bottom: 16px;">
-    <button type="button" class="btn btn-sm btn-default active" data-filter="featured">📜 Essays</button>
-    <button type="button" class="btn btn-sm btn-default" data-filter="til">💡 TIL</button>
-    <button type="button" class="btn btn-sm btn-default" data-filter="jottings">📝 Jottings</button>
-    <button type="button" class="btn btn-sm btn-default" data-filter="all">All</button>
+    <button type="button" class="btn btn-sm btn-default active" data-filter="featured" aria-pressed="true">📜 Essays</button>
+    <button type="button" class="btn btn-sm btn-default" data-filter="til" aria-pressed="false">💡 TIL</button>
+    <button type="button" class="btn btn-sm btn-default" data-filter="jottings" aria-pressed="false">📝 Jottings</button>
+    <button type="button" class="btn btn-sm btn-default" data-filter="all" aria-pressed="false">All</button>
   </div>
 
   {{/* Combined feed — featured essays are shown by default; TILs/Jottings hidden until filtered */}}
@@ -89,8 +89,12 @@
       var filter = this.dataset.filter;
 
       // Update active button
-      buttons.forEach(function(b) { b.classList.remove('active'); });
+      buttons.forEach(function(b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       this.classList.add('active');
+      this.setAttribute('aria-pressed', 'true');
 
       // Show/hide items
       var visibleCount = 0;

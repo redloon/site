@@ -1,10 +1,11 @@
+<main id="main-content" tabindex="-1">
 <header class="row text-left title">
   <h1 class="title">{{ .Title }}</h1>
 </header>
 <section id="category-pane" class="row meta">
   {{ if ne .Params.showpagemeta false }}
   <div class="col-md-12">
-    <h6 class="text-left meta">
+    <p class="text-left meta">
       <!-- {{ if not .Date.IsZero }} PUBLISHED ON {{ .Date.Format .Site.Params.dateformat | upper }}&colon; {{ .WordCount }} words&comma; {{.ReadingTime}} minute read{{end}} -->
 
       {{ if not .Date.IsZero }}
@@ -37,14 +38,14 @@
       {{ end }}
       {{ end }}
       {{ end }}
-    </h6>
+    </p>
   </div>
   {{ end }}
 </section>
 <section id="tag-pane" class="row meta">
   {{ if ne .Params.showpagemeta false }}
   <div class="col-md-12">
-    <h6 class="text-left meta">
+    <p class="text-left meta">
       {{ if isset .Params "tags" }}
       {{ $total := len .Params.tags }}
       {{ if gt $total 0 }}
@@ -54,7 +55,7 @@
       {{ end }}
       {{ end }}
       {{ end }}
-    </h6>
+    </p>
   </div>
   {{ end }}
 </section>
@@ -85,3 +86,4 @@
   </div>
 </section>
 
+</main>
