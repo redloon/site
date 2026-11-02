@@ -451,17 +451,9 @@ input:focus-visible,
     outline-offset: 3px;
 }
 
-.skip-link {
-    position: absolute;
-    left: 1rem;
-    top: -5rem;
-    z-index: 1100;
-    padding: 0.5em 1em;
-    background: #fcfcfc;
-}
-
-.skip-link:focus {
-    top: 1rem;
+.nav-social-icon {
+    width: 16px;
+    height: 16px;
 }
 
 /* Keep heading permalinks available to keyboard users as well as mouse users. */

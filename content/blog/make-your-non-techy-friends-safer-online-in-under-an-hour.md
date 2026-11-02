@@ -11,7 +11,7 @@ _template = "blog_post"
 
 As someone who pretends to know tech, it can be a hair-pulling experience watching the blatant disregard people you care about have for privacy & security online. Unsecured Wi-Fi named `Sturbucks`? seems legit 🤦‍♀️. They might not know the dangers all around and need someone to watch out for them.
 
-{{< tenor-gif 7883152 "https://tenor.com/view/oblivious-fight-headphones-spiderman-stan-lee-gif-7883152" >}}
+{{< tenor-gif 7883152 "https://tenor.com/view/oblivious-fight-headphones-spiderman-stan-lee-gif-7883152" "Stan Lee wearing headphones, oblivious to a fight behind him" >}}
 
 You want to help them be more secure, but it's easy to come at it wrong. Online privacy and security is a deep rabbit hole, and you can quickly drop people in over their head. If the task becomes daunting, or your approach makes them defensive, they likely won't bother. Instead of hammering them with information and tasks, follow the [Pareto Principle](https://lawsofux.com/pareto-principle) (80/20 rule): start with the simple actions which have a large effect on reducing their vulnerability. In under an hour, you can work through these 4 steps and stop your friends & family from being the low-hanging fruit baddies love.
 

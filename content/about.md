@@ -47,7 +47,7 @@ Ended up studying Computer Engineering in my first year of university, but the c
 ### 🧑‍💻 [Product-minded](https://blog.pragmaticengineer.com/the-product-minded-engineer/) Backend Software Engineer/ [Developer Generalist](https://granot.dev/developer-generalists/)
 
 - If you’re looking for a code monkey to optimize clicks, we’ll both be disappointed 🙈.
-- Know enough to be dangerous across the stack, from [infra with Ansible](https://github.com/I-Dont-Remember/AnsibleLaptop) to APIs in Python to SPAs like React, but most effective working with non-GUI projects — CLIs, APIs, backend systems. Frontend just ain't my jam long-term.
+- Know enough to be dangerous across the stack, from [infra with Ansible](https://github.com/redloon/AnsibleLaptop) to APIs in Python to SPAs like React, but most effective working with non-GUI projects — CLIs, APIs, backend systems. Frontend just ain't my jam long-term.
     - _Slack bots are the most fun to work with, because you can do "front-end" UX work without having to deal with CSS - their [Block Kit framework](https://api.slack.com/block-kit) just takes JSON and then renders things all pretty for you._
 - I focus on building products with value, rather than being obsessed with any particular language or tool. Sometimes the best language to use is the Delete button.
 - Obsessed with documentation and automation - my memory sucks, so if it's not written down somewhere easy to find, it doesn't exist. Every team I've ever been on I've been a champion for documenting processes in our repos and writing scripts for any annoying tasks.

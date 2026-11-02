@@ -1,5 +1,7 @@
 
-<div class="tenor-gif-embed" style="" data-postid="{{ (index .Params 0)}}" data-share-method="host" data-aspect-ratio="1.665" data-width="70%">
-    <a href="{{ (index .Params 1) }}">gif</a>
-</div> 
-<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+{{ $description := "Tenor GIF" }}
+{{ if gt (len .Params) 2 }}{{ $description = .Get 2 }}{{ end }}
+<div class="tenor-gif">
+    <iframe src="https://tenor.com/embed/{{ .Get 0 }}" title="{{ $description }}" loading="lazy" style="display:block; width:70%; height:auto; aspect-ratio:1.665; border:0;" allowfullscreen></iframe>
+    <a href="{{ .Get 1 }}">View on Tenor: {{ $description }}</a>
+</div>

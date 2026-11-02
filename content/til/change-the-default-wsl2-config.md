@@ -30,7 +30,7 @@ As you can see in the table above, I droppped things down to more sane defaults,
 
 I feel quite silly it took me this long to investigate and try things out, but my laptop feels SOOO much snappier now in the browser.
 
-The new `$HOME/.wslconfig` file ([latest saved in my dotfiles](https://github.com/I-Dont-Remember/dotfiles/blob/master/windows/wslconfig)):
+The new `$HOME/.wslconfig` file ([latest saved in my dotfiles](https://github.com/redloon/dotfiles/blob/master/windows/wslconfig)):
 
 ```ini
 [wsl2]

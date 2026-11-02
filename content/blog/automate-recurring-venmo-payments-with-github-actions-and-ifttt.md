@@ -11,7 +11,7 @@ _template = "blog_post"
 
 Like so many tinkerers, I love to [automate small parts of my life, while ignoring any actual work](https://xkcd.com/1319/) I should be doing. After stumbling on [Joe’s Venmo automation](https://joeprevite.com/send-automatic-recurring-payments-on-venmo), I immediately swept all the important things off my plate to have some fun. Now let’s set up automatic payments on [Venmo](https://venmo.com/) in less than an hour — with email notifications for peace of mind!
 
-![Clock + robot snake + Venmo](/uploads/recurring-venmo-payments-smaller.png#center)
+![Clock + robot snake + Venmo](/uploads/recurring-venmo-payments-smaller.webp#center)
 
 ## Why not Nocode (Zapier, IFTTT, etc.)
 
@@ -60,8 +60,8 @@ Diving into the meat & potatoes you came for, how to actually get this dang thin
 
     You’ll have to be comfortable working with Python dependencies to run these scripts locally.
 
-    - Install the [Venmo client library](https://github.com/I-Dont-Remember/venmo/blob/master/main.py#L32) `venmo-api`.
-    - Run this [Python script](https://github.com/I-Dont-Remember/venmo/blob/master/fetch_v_token.py) to pull your access token. You may need to handle MFA.
+    - Install the [Venmo client library](https://github.com/redloon/venmo/blob/master/main.py#L32) `venmo-api`.
+    - Run this [Python script](https://github.com/redloon/venmo/blob/master/fetch_v_token.py) to pull your access token. You may need to handle MFA.
 
     ```
     from venmo_api import Client
@@ -81,7 +81,7 @@ Diving into the meat & potatoes you came for, how to actually get this dang thin
 
 3. **(Optional) 🗺 Map Venmo usernames to IDs**
 
-    Then Venmo API requires payment requests to be tied to an ID, rather than the `@username` we humans use in the app. I did the mapping of usernames during setup and [added them as environment secrets](https://github.com/I-Dont-Remember/venmo/blob/f375c57ec30d668c4ce1c40403cd06c9be843f1d/main.py#L32), but you can just as easily add 1 extra LOC to convert during regular runs.
+    Then Venmo API requires payment requests to be tied to an ID, rather than the `@username` we humans use in the app. I did the mapping of usernames during setup and [added them as environment secrets](https://github.com/redloon/venmo/blob/f375c57ec30d668c4ce1c40403cd06c9be843f1d/main.py#L32), but you can just as easily add 1 extra LOC to convert during regular runs.
 
     ```
     user = venmo_client.user.get_user_by_username(username)
@@ -91,7 +91,7 @@ Diving into the meat & potatoes you came for, how to actually get this dang thin
 
 4. **🐍 Modify the Python script**
 
-    [The script I use](https://github.com/I-Dont-Remember/venmo/blob/master/main.py#L32) has a simple entry point, then defines a separate function for each Venmo request I want it to make, YMMV. You’ll need to make some small adjustments based on how many requests you need it to make & how you fetch Venmo user IDs. The most important bits can be boiled down to this `main.py`:
+    [The script I use](https://github.com/redloon/venmo/blob/master/main.py#L32) has a simple entry point, then defines a separate function for each Venmo request I want it to make, YMMV. You’ll need to make some small adjustments based on how many requests you need it to make & how you fetch Venmo user IDs. The most important bits can be boiled down to this `main.py`:
 
     ```
     # main.py
@@ -152,7 +152,7 @@ Diving into the meat & potatoes you came for, how to actually get this dang thin
 
     ✋ At this point you should have your `VENMO_ACCESS_TOKEN` saved in Secrets, along with the optional `IFTTT_WEBHOOK` or `USER_IDs` values. if you didn’t, go back and do it.
 
-    Now create your [workflow definition](https://github.com/I-Dont-Remember/venmo/blob/master/.github/workflows/recurring.yml) at `.github/workflows/<workflow-name>.yml` . This is where you will define your schedule in `cron`. My example shows monthly Venmo requests.
+    Now create your [workflow definition](https://github.com/redloon/venmo/blob/master/.github/workflows/recurring.yml) at `.github/workflows/<workflow-name>.yml` . This is where you will define your schedule in `cron`. My example shows monthly Venmo requests.
 
     ```
     # <workflow-name>.yml

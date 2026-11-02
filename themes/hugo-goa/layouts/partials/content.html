@@ -1,4 +1,4 @@
-<main id="main-content" tabindex="-1">
+<main id="main-content">
 <header class="row text-left title">
   <h1 class="title">{{ .Title }}</h1>
 </header>
@@ -61,10 +61,11 @@
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 content">
-    {{ if isset .Params "showHeaderImage" }}
+    {{ if .Params.showheaderimage }}
       {{ if gt (len .Params.images)  0}}
         {{ range .Params.images }}
-          <img src="{{ . }}" alt="">
+          {{/* Empty alt is intentional for decorative header art unless the author supplies a description. */}}
+          <img src="{{ . }}" alt="{{ $.Params.headerimagealt | default "" }}" class="img-responsive">
         {{ end }}
       {{ end }}
     {{ end }}

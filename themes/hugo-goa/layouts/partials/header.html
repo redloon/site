@@ -65,9 +65,6 @@
 {{/*  <div class="home-link" style="margin-top: 1%; margin-left: 2%;">
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">🏠</a>
 </div>  */}}
-{{ if and .IsPage (eq .Type "blog") }}
-<a class="skip-link" href="#main-content">Skip to article</a>
-{{ end }}
 <nav aria-label="Main navigation" class="navbar navbar-default navbar-static-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -138,12 +135,12 @@
         </li>
         <li>
           {{ with .Site.Params.social.twitter }}
-            <a href="https://twitter.com/{{.}}" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/{{.}}" aria-label="Twitter"><img class="nav-social-icon" src="/img/twitter-x-icon.svg" alt="" aria-hidden="true"></a>
           {{ end }}
         </li>
         <li>
           {{ with .Site.Params.social.github }}
-            <a href="https://github.com/{{.}}" aria-label="GitHub"><i class="fa fa-github social-icon" style="padding-left: 2%;" aria-hidden="true"></i></a>
+            <a href="https://github.com/{{.}}" aria-label="GitHub"><img class="nav-social-icon" src="/img/github-icon.svg" alt="" aria-hidden="true"></a>
           {{ end }}
         </li>
       </ul> 
