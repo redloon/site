@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/I-Dont-Remember/site.git"
+    "url": "git+https://github.com/redloon/site.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/I-Dont-Remember/site/issues"
+    "url": "https://github.com/redloon/site/issues"
   },
-  "homepage": "https://github.com/I-Dont-Remember/site#readme",
+  "homepage": "https://github.com/redloon/site#readme",
   "dependencies": {
     "@playwright/cli": "^0.1.1",
     "@tinacms/cli": "^1.5.8",

@@ -41,13 +41,13 @@ There are a variety of fantastic tools to track dotfile history, syncing, and an
 
 1. start a Git repo, I prefer to have all my files in the repo without the dot so it's more obvious when tracking in Git and also won't overwrite anything on accident.
 2. Clone that repo to `~/dotfiles`.
-3. Write a [script](https://github.com/I-Dont-Remember/dotfiles/blob/master/link_dotfiles.sh), or document the command, for [symlinking](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/) the real file to the dotfiles version, e.g. `ln -s ~/dotfiles/bash_profile ~/.bash_profile`.
+3. Write a [script](https://github.com/redloon/dotfiles/blob/master/link_dotfiles.sh), or document the command, for [symlinking](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/) the real file to the dotfiles version, e.g. `ln -s ~/dotfiles/bash_profile ~/.bash_profile`.
 
 You're off to the races! My best advice is to not try to collect everything at once or you'll end up with a pile of stuff you don't need. Let it evolve with you over time rather than aiming for perfection out of the gate.
 
 ## Favorite Tweaks
 
-My [dotfiles](https://github.com/I-Dont-Remember/dotfiles) are full of tidbits I've stumbled on, so I pulled out the best pieces for you.
+My [dotfiles](https://github.com/redloon/dotfiles) are full of tidbits I've stumbled on, so I pulled out the best pieces for you.
 
 ### Pump up the prompt
 
@@ -89,7 +89,7 @@ If you want to expand on the `git_dirty` status indicator, you can [read here](h
 
 ### Aliases
 
-* Aliases lessen how much I have to type and also do the remembering of common args I need. You can also add functions that take arguments, though eventually they could move to a `$HOME/bin` folder or similar along your `$PATH`. You can check mine out [here](https://github.com/I-Dont-Remember/dotfiles/blob/master/bash_aliases). The most useful one is `extract()` so I never have to figure out how to open a compressed file - this was ripped from someone's dotfiles many years back, the origins are unknown.
+* Aliases lessen how much I have to type and also do the remembering of common args I need. You can also add functions that take arguments, though eventually they could move to a `$HOME/bin` folder or similar along your `$PATH`. You can check mine out [here](https://github.com/redloon/dotfiles/blob/master/bash_aliases). The most useful one is `extract()` so I never have to figure out how to open a compressed file - this was ripped from someone's dotfiles many years back, the origins are unknown.
 
 ### (Niche) OS-specific configuration
 

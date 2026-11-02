@@ -1,10 +1,11 @@
+<main id="main-content">
 <header class="row text-left title">
   <h1 class="title">{{ .Title }}</h1>
 </header>
 <section id="category-pane" class="row meta">
   {{ if ne .Params.showpagemeta false }}
   <div class="col-md-12">
-    <h6 class="text-left meta">
+    <p class="text-left meta">
       <!-- {{ if not .Date.IsZero }} PUBLISHED ON {{ .Date.Format .Site.Params.dateformat | upper }}&colon; {{ .WordCount }} words&comma; {{.ReadingTime}} minute read{{end}} -->
 
       {{ if not .Date.IsZero }}
@@ -32,19 +33,19 @@
       {{ if gt $total 0 }}
       —
       {{ $total := sub $total 1 }}
-      {{ range $i, $cat := sort $.Params.categories }}
-      <a class="meta" href="{{ "/categories/" | relURL }}{{ $cat | urlize }}/">{{ $cat | upper }}</a>{{ if lt $i $total }}, {{ end }}
+      {{ range $i, $cat := ($.GetTerms "categories") }}
+      <a class="meta" href="{{ $cat.RelPermalink }}">{{ $cat.LinkTitle | upper }}</a>{{ if lt $i $total }}, {{ end }}
       {{ end }}
       {{ end }}
       {{ end }}
-    </h6>
+    </p>
   </div>
   {{ end }}
 </section>
 <section id="tag-pane" class="row meta">
   {{ if ne .Params.showpagemeta false }}
   <div class="col-md-12">
-    <h6 class="text-left meta">
+    <p class="text-left meta">
       {{ if isset .Params "tags" }}
       {{ $total := len .Params.tags }}
       {{ if gt $total 0 }}
@@ -54,16 +55,17 @@
       {{ end }}
       {{ end }}
       {{ end }}
-    </h6>
+    </p>
   </div>
   {{ end }}
 </section>
 <section id="content-pane" class="row">
   <div class="col-md-12 content">
-    {{ if isset .Params "showHeaderImage" }}
+    {{ if .Params.showheaderimage }}
       {{ if gt (len .Params.images)  0}}
         {{ range .Params.images }}
-          <img src="{{ . }}" alt="">
+          {{/* Empty alt is intentional for decorative header art unless the author supplies a description. */}}
+          <img src="{{ . }}" alt="{{ $.Params.headerimagealt | default "" }}" class="img-responsive">
         {{ end }}
       {{ end }}
     {{ end }}
@@ -85,3 +87,4 @@
   </div>
 </section>
 
+</main>

@@ -32,7 +32,7 @@ Dex is kind enough to make exporting your contacts data super easy, so we don't 
 1. **Export my data from Dex**
    * Login to Dex, then go to the [Settings->Export page](https://getdex.com/appv3/settings/export). Download both of the files available.
 2. **Upload the two CSVs _(Notes & Contacts)_ into Nocodb/Airtable**
-   * Both Airtable and Nocodb [_(self-hostable, open-source Airtable alternative)_](/blog/how-to-self-host-nocodb-on-fly.io/) have options that let you import a CSV file as a new Table.
+   * Both Airtable and Nocodb [_(self-hostable, open-source Airtable alternative)_](/blog/how-to-self-host-nocodb-on-fly/) have options that let you import a CSV file as a new Table.
    * On import it will ask you to choose the different field types to match Nocodb/Airtable types - ones I've already figured out and you can copy are:
      **Contacts**
 
@@ -54,7 +54,7 @@ Dex is kind enough to make exporting your contacts data super easy, so we don't 
 ### Final Result
 
 Both of the new tables thriving in my self-hosted NocoDB instance - this is just a Proof of Concept to make sure the idea works, so not worried about reliability for now.
-![](/uploads/dex-data-in-nocodb.jpg)
+![NocoDB interface with an imported Dex contacts table, including Name and FirstName columns.](/uploads/dex-data-in-nocodb.jpg)
 
 ## Another Alternative
 

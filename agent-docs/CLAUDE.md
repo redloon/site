@@ -33,7 +33,7 @@ make validate    # builds the site + checks all internal links
 make lint        # markdownlint on content/
 ```
 
-**Known baseline:** `make validate` currently reports **63 pre-existing broken internal links** — mostly category cross-links from when categories were renamed (e.g. `/categories/dev-ex-ux/` referenced from tag pages that no longer match). These are tracked in `tech-debt.md` (see the link checker output section). If you run `make validate` and see more than 47 broken links, you've introduced a regression.
+**Known baseline:** `make validate` passes with **zero broken internal links** (November 2026). Category links use Hugo term permalinks rather than manually deriving slugs. Treat new broken links as regressions. Stop the development server before validation so live-reload output cannot overwrite the production build during checks.
 
 For risky changes (library upgrades, CSS refactors, template changes):
 

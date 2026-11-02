@@ -11,8 +11,8 @@
         {{ if gt $total 0 }}
         —
         {{ $total := sub $total 1 }}
-        {{ range $i, $cat := sort .Params.categories }}
-        <a class="category" href="{{ "/categories/" | relURL }}{{ $cat | humanize | urlize }}">{{ $cat | upper }}</a>{{ if lt $i $total }}, {{ end }}
+        {{ range $i, $cat := (.GetTerms "categories") }}
+        <a class="category" href="{{ $cat.RelPermalink }}">{{ $cat.LinkTitle | upper }}</a>{{ if lt $i $total }}, {{ end }}
         {{ end }}
         {{ end }}
         {{ end }}

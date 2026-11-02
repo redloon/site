@@ -99,7 +99,7 @@ I think for 1, we'll need to have new materials either created or become cheap e
 
 ---
 
-## Bringing the present to more of the world + tech literacy + security for the non-tech-literate
+## Bringing the present to more of the world + tech literacy + security for the non-tech-literate {#bringing-the-present-to-more-of-the-world}
 
 Some of us live in a world where average people, not just billionaires, can unlock their phones with just a glance while sitting in a self-driving electric car. This is the present, not even the distant future. At the exact same time, there are millions of humans who don't know if they will have enough to eat to make it through the week. Global wealth disparity is not a new issue, but there has to be more which can be done. I refuse to believe the collective brain power of millions of people can't find solutions to bring up the quality of life for the millions just like them except for the circumstances of birth.
 

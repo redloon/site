@@ -9,7 +9,7 @@ I wanted to add a random button to one of my Hugo sites after remembering how ha
 
 ## What are we making?
 
-![Portfolio website with a randomizer button](/uploads/hugo-site-random-button-small.jpg#center)
+![Portfolio website with a randomizer button](/uploads/hugo-site-random-button-small.webp#center)
 
 ## How-to
 

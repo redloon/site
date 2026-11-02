@@ -24,7 +24,7 @@ As a brash junior engineer who had read too many [Joel Spolsky](https://www.joel
 
 To be clear, we didn’t just sit on our hands. He had us sit down with the outgoing team for knowledge transfer. Then, to my utter confusion, he insisted we follow their processes. No refactoring, no rewrites, just observation and patience. It felt like watching someone stand idly by as a fire raged, extinguisher in hand. I couldn’t understand why he wasn’t rushing to put it out.
 
-![a cartoon of a junior developer running to rip up a fence as a senior engineer tries to understand - the audience sees it protects from a cliff and angry swarm of bees, hidden to the characters.](/uploads/chestertons-fence-illustrated.png)
+![a cartoon of a junior developer running to rip up a fence as a senior engineer tries to understand - the audience sees it protects from a cliff and angry swarm of bees, hidden to the characters.](/uploads/chestertons-fence-illustrated.webp)
 
 After a couple weeks of dutifully watching the error backlog pile up, we learned the ins & outs of the system, and began to understand some of the choices the original developers had made. With a little distance, we could see the previous engineers weren't lazy or stupid - they were dealing with shifting requirements and tight deadlines. Eventually it clicked: my tech lead had multiple reasons for taking this approach. The first one which got through to my technically-minded brain was  [Chesterton’s Codebase](https://fs.blog/chestertons-fence/) — don’t start changing things until you understand why they exist. The other I hadn’t considered was that to a business, engineering time to refactor often costs more than sticking with a sub-optimal architecture you already have. It turns out engineers are expensive, and refactoring isn’t always the best use of their time.
 
@@ -39,7 +39,7 @@ Upon digging deeper, we realized this was only one side of the story. The previo
 - Cue the blame game. No one fixed anything, and the relationship soured
 
 
-![playing the blame game - cartoon stick figures playing tennis but instead of a ball, they're passing errors back and forth](/uploads/error-blame-game-tennis.png#center)
+![playing the blame game - cartoon stick figures playing tennis but instead of a ball, they're passing errors back and forth](/uploads/error-blame-game-tennis.webp#center)
 
 In a shocking twist, people don’t like being blamed for failures — especially when it might not be their fault. It’s like blaming your spouse for muddy footprints while ignoring the trail behind you. Of course the PC wasn’t going out of their way to help; they were too busy fending off accusations.
 

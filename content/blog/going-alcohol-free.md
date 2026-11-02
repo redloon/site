@@ -8,7 +8,7 @@ description = "My journey from sink-hugging champion to teetotaling extraordinai
 
 There I was, vomiting for the 10th time into not just one, but two different sinks, all while managing to avoid the obvious target of the toilet. This was, to put it mildly, not my best moment.
 
-![](/uploads/drake-toilet-sink-vomit-meme.png)
+![Drake meme rejecting the toilet and approving every sink as a place to vomit.](/uploads/drake-toilet-sink-vomit-meme.png)
 
 It sounds overly dramatic to call it a "turning point", as my alcohol consumption was average or less, but it was the moment in time when I started to make changes. I've now been alcohol-free for 1.5-2.5 years, and haven't regretted it yet. This isn't a hit piece on booze - if you still like to go out for drinks, all power to you. Keep our economy flowing you beautiful beast. If you are curious what it's like to quit in your late 20's though, you can try on my motivations & what I experienced and see if any of it resonates with you.
 

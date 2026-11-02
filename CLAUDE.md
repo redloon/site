@@ -10,14 +10,14 @@ Use `agent-docs/` as a reference, since it's meant for documenting specific know
 
 At one point I added Tina, which lets you run a local CMS for easier editing. I also often just manually add new content in VSCode.
 
-Tina is rarely used day-to-day anymore — editing is almost always done directly in VSCode. Tina is still wired into the Netlify build (`npx tinacms build && hugo --gc --minify`), so it still runs on deploy.
+Tina is rarely used day-to-day anymore — editing is almost always done directly in VSCode. The current Netlify build runs `hugo --gc --minify`; Tina remains available for local editing.
 
 ## Environment
 
 - Hugo `v0.146.1` and Node are managed via `mise` (`mise.toml`). Run `make setup` in a fresh environment to install all tools.
 - The `hugo/` directory in the repo root is gitignored — it's a leftover from when the binary was installed manually there. Don't rely on it; use `mise` instead.
 - The `mise` tool is available for you to use.
-- It deploys to Netlify whenever a push is made to the main branch.
+- It deploys to Netlify whenever a push is made to the default branch (`master`). Pull request deploy previews are working (confirmed November 2026).
 - `artifacts/` is for things I want to keep in the repo, but which don't get served on the site, e.g. original copies of Excalidraw files that were used as the source to generate images.
 - I have added [playwright-cli](https://github.com/microsoft/playwright-cli) to the Node dependencies of this repo. Use `make screenshot` and `make pr-screenshots` targets rather than composing raw `npx playwright-cli` commands — see the Testing & Validation section below.
 

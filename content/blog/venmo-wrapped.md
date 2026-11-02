@@ -21,7 +21,7 @@ _Unfortunately, I can't promise this wil be as exciting as when Venmo left every
 
 To give you a preview of what sort of info you might find in your own Venmo Wrapped, here's mine for 2022 (omitting any sensitive details like specific people or amounts) and a [**copyable Sheets template**](https://docs.google.com/spreadsheets/d/1MotwaQm1jyDeqBVdD-ZTFTSHyvJyyI9gSwjt3B9_Wa0/edit?usp=sharing):
 
-![](/uploads/venmo-wrapped-2022.jpg)
+{{< figure src="/uploads/venmo-wrapped-2022.jpg" alt="Venmo Wrapped 2022 summary with transaction counts, a weekday chart, and percentages of notes with emojis or jokes." caption="My 2022 snapshot. The main statistics are listed in text below." >}}
 
 * ⏳ Oldest incomplete request is **1,332 days** _(May 10, 2019)_
 * 👯 **45** people interacted with
@@ -64,7 +64,7 @@ Venmo only gives the option to download 1 month of transactions through CSV at a
 
 ### Venmo terminology
 
-To make sure we're on the same page, my understanding of some of the vocabulary used in their CSV file [_(if I'm wrong, please let me know!)_](#share-your-venmo-wrapped):
+To make sure we're on the same page, my understanding of some of the vocabulary used in their CSV file [_(if I'm wrong, please let me know!)_](#make-your-own-venmo-wrapped):
 
 * **Payment** - Money was directly sent. Negative values are when I (you) paid someone else.
 * **Charge** - Money was requested, and then accepted. Negative values are when someone else requested me (you).
