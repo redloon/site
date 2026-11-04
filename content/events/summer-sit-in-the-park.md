@@ -8,25 +8,34 @@ emoji = "🌳☀️🧺"
 timezone = "America/Chicago"
 location = "Lincoln Park — near the Hamilton statue"
 location_url = "https://maps.app.goo.gl/QHTyKNUjzrtCyAm36"
+cost = "Free"
+bring = "A chair or blanket (I have 1–2 extra)"
+food = "Eat before or grab something nearby"
+rain_plan = "Cancelled if raining — check back"
 
 [[event_dates]]
   date = "2026-06-04T23:00:00Z"
   duration_hours = 2.5
-  note = "test one solo, no you didn't miss it"
 [[event_dates]]
   date = "2026-06-08T23:00:00Z"
+  duration_hours = 2.5
   note = "❌️ rain & thunderstorms - cancelled"
 [[event_dates]]
   date = "2026-06-15T23:00:00Z"
+  duration_hours = 2.5
 [[event_dates]]
   date = "2026-06-22T23:00:00Z"
+  duration_hours = 2.5
 [[event_dates]]
   date = "2026-06-29T23:00:00Z"
+  duration_hours = 2.5
 [[event_dates]]
   date = "2026-07-06T23:00:00Z"
+  duration_hours = 2.5
   note = "⚠️ tentative"
 [[event_dates]]
   date = "2026-09-14T23:00:00Z"
+  duration_hours = 2.5
   note = "⚠️ tentative"
 [build]
   list = "local"
@@ -40,7 +49,7 @@ I don't spend enough time outside appreciating that it's **NOT WINTER**, so we s
 
 ## TL;DR
 
-Come sit in the park with me, aiming for Mon's all summer _(See the schedule)_
+Come sit in the park with me, aiming for Mondays all summer — [see the schedule](#dates)
 
 - No RSVPs, just show up, or don't
 - Bring: a chair or blanket to sit on. I'll have one or two extra.

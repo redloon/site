@@ -93,7 +93,7 @@ html { overflow-x: hidden; }
   font-size: 1rem;
 }
 .event-date.past {
-  opacity: .38;
+  opacity: .5;
   text-decoration: line-through;
   border-left-color: transparent;
 }
@@ -120,7 +120,7 @@ html { overflow-x: hidden; }
   .event-hero--emoji .event-hero__title,
   .event-hero--image .event-hero__title { font-size: 1.6rem; }
   .event-content { padding: 18px 16px; margin: 12px 0 24px; }
-  .event-action-btn { padding: 10px 14px; min-height: 42px; }
+  .event-action-btn { padding: 10px 14px; min-height: 44px; }
 }
 
 /* ── Shared button base ── */
@@ -142,11 +142,47 @@ html { overflow-x: hidden; }
   cursor: default;
 }
 
-/* ── Share button ── */
-.event-share {
+/* ── Next-date callout ── */
+.event-next-callout {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 4px;
+  padding: 14px 18px;
+  margin: 16px 0 0;
+}
+.event-next-callout__label {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #92400e;
+  display: block;
+  margin-bottom: 2px;
+}
+.event-next-callout__date {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #78350f;
+}
+
+/* ── Action buttons row ── */
+.event-actions {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 16px;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+/* ── Quick-info meta ── */
+.event-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: .95rem;
+  color: #555;
 }
 
 /* ── Add-to-calendar button ── */
@@ -171,22 +207,31 @@ html { overflow-x: hidden; }
   {{ end }}
 
   <div class="container">
+    <div class="event-next-callout" id="next-date-callout" style="display:none">
+      <span class="event-next-callout__label">Next up</span>
+      <span class="event-next-callout__date" id="next-date-text"></span>
+    </div>
     <article class="event-content">
 
-      <div class="event-share">
-        <button class="event-action-btn" id="share-btn"
-          data-title="{{ .Title }}"
-          data-location="{{ .Params.location | default "" }}">📤 Share link</button>
-      </div>
-
       {{ with .Params.location }}<p class="event-location">📍 {{ if $.Params.location_url }}<a href="{{ $.Params.location_url }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>{{ else }}{{ . }}{{ end }}</p>{{ end }}
+
+      {{ $hasMeta := or .Params.cost .Params.bring .Params.food .Params.dress .Params.rain_plan }}
+      {{ if $hasMeta }}
+      <ul class="event-meta">
+        {{ with .Params.cost }}<li>💸 {{ . }}</li>{{ end }}
+        {{ with .Params.bring }}<li>🎒 {{ . }}</li>{{ end }}
+        {{ with .Params.food }}<li>🍽️ {{ . }}</li>{{ end }}
+        {{ with .Params.dress }}<li>👔 {{ . }}</li>{{ end }}
+        {{ with .Params.rain_plan }}<li>🌧️ {{ . }}</li>{{ end }}
+      </ul>
+      {{ end }}
 
       {{ with .Content }}<div class="event-body">{{ . }}</div>{{ end }}
 
          {{ with .Params.event_dates }}
       <hr />
       <section class="event-dates">
-        <h2 id="dates">Dates</h2>
+        <h2 id="dates">{{ if gt (len $.Params.event_dates) 1 }}All dates{{ else }}Date{{ end }}</h2>
         <ul class="event-dates__list">
           {{ range . }}
           <li class="event-date" data-date="{{ .date }}"{{ with .duration_hours }} data-duration="{{ . }}"{{ end }}>
@@ -195,10 +240,15 @@ html { overflow-x: hidden; }
           </li>
           {{ end }}
         </ul>
-        <button class="event-action-btn event-cal-btn" id="add-to-cal"
-          data-title="{{ $.Title }}"
-          data-location="{{ $.Params.location | default "" }}"
-          data-slug="{{ $.File.ContentBaseName }}">📅 Add next date to calendar</button>
+        <div class="event-actions">
+          <button class="event-action-btn event-cal-btn" id="add-to-cal"
+            data-title="{{ $.Title }}"
+            data-location="{{ $.Params.location | default "" }}"
+            data-slug="{{ $.File.ContentBaseName }}">📅 {{ if gt (len $.Params.event_dates) 1 }}Add next date to calendar{{ else }}Add to calendar{{ end }}</button>
+          <button class="event-action-btn" id="share-btn"
+            data-title="{{ $.Title }}"
+            data-location="{{ $.Params.location | default "" }}">📤 Share link</button>
+        </div>
       </section>
       {{ end }}
     </article>
@@ -222,6 +272,12 @@ html { overflow-x: hidden; }
     return new Intl.DateTimeFormat('en-US', opts).format(d).replace(/ /g, ' ').toLowerCase();
   }
 
+  function tzAbbr(d) {
+    var parts = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'short' }).formatToParts(d);
+    var p = parts.find(function (x) { return x.type === 'timeZoneName'; });
+    return p ? ' ' + p.value : '';
+  }
+
   function fmtLabel(d, duration) {
     var datePart = new Intl.DateTimeFormat('en-US', {
       timeZone: tz, weekday: 'long', month: 'long', day: 'numeric'
@@ -230,6 +286,7 @@ html { overflow-x: hidden; }
     if (duration) {
       timeStr += ' – ' + fmtTime(new Date(d.getTime() + duration * 60 * 60 * 1000));
     }
+    timeStr += tzAbbr(d);
     return datePart + ' · ' + timeStr;
   }
 
@@ -246,11 +303,22 @@ html { overflow-x: hidden; }
     }
   });
 
+  if (nextItem) {
+    var callout = document.getElementById('next-date-callout');
+    var calloutDate = document.getElementById('next-date-text');
+    if (callout && calloutDate) {
+      var labelEl = callout.querySelector('.event-next-callout__label');
+      if (labelEl) labelEl.textContent = items.length > 1 ? 'Next up' : 'When';
+      calloutDate.textContent = nextItem.querySelector('.event-date__label').textContent;
+      callout.style.display = '';
+    }
+  }
+
   var btn = document.getElementById('add-to-cal');
   if (!btn) return;
 
   if (!nextItem) {
-    btn.textContent = '(all dates have passed)';
+    btn.textContent = items.length > 1 ? '(all dates have passed)' : '(this event has passed)';
     btn.disabled = true;
     return;
   }
